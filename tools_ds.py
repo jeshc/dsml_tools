@@ -15,4 +15,10 @@ def graf_dist_categoricas(dframe, *categoricas):
     plt.tight_layout()
     plt.show()
 
+def limpia_cadena(cadena_actual, regex, cadena_remplazo):
+    nueva_cadena = re.sub(regex, cadena_remplazo, cadena_actual)
+    nueva_cadena = re.sub(r'[ -/]','_',nueva_cadena.strip())
+    return nueva_cadena
+
+
 
